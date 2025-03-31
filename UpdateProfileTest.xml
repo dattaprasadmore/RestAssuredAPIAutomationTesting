@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.api.reporting.Setup"></listener>
+    </listeners>
+    <parameter name="BaseURL" value="http://64.227.160.186:8080"></parameter>
+    <test name="UpdateProfileTest">
+        <classes>
+            <class name="com.api.Tests.UpdateProfileTest">
+            </class>
+        </classes>
+    </test>
+</suite>

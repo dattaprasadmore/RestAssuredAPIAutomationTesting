@@ -1,0 +1,184 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>RestAssuredAPIAutomationTesting</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>RestAssuredAPIAutomationTesting</name>
+  <url>http://maven.apache.org</url>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.2</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          <forkCount>0</forkCount>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junitVersion>3.8.1</junitVersion>
+    <restassuredVersion>5.5.0</restassuredVersion>
+    <testngVersion>7.7.0</testngVersion>
+    <jackson-databindVersion>2.17.2</jackson-databindVersion>
+    <gsonVersion>2.10.1</gsonVersion>
+    <extentreportsVersion>5.0.9</extentreportsVersion>
+    <javafakerVersion>1.0.2</javafakerVersion>
+    <datafakerVersion>2.4.2</datafakerVersion>
+    <lombokVersion>1.18.24</lombokVersion>
+    <apacheCommonsLangVersion>3.17.0</apacheCommonsLangVersion>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <javers-coreVersion>7.7.0</javers-coreVersion>
+    <poi-ooxmlVersion>5.3.0</poi-ooxmlVersion>
+    <poi-Version>5.3.0</poi-Version>
+    <poijiVersion>4.6.0</poijiVersion>
+    <mysql.connector.version>9.2.0</mysql.connector.version>
+    <assertj.core.version>3.21.0</assertj.core.version>
+    <jdbi3.core.version>3.47.0</jdbi3.core.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junitVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>${restassuredVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testngVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-databindVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>${gsonVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>${extentreportsVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+    <dependency>
+      <groupId>com.github.javafaker</groupId>
+      <artifactId>javafaker</artifactId>
+      <version>${javafakerVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.datafaker/datafaker -->
+    <dependency>
+      <groupId>net.datafaker</groupId>
+      <artifactId>datafaker</artifactId>
+      <version>${datafakerVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombokVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${apacheCommonsLangVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.javers/javers-core -->
+    <dependency>
+      <groupId>org.javers</groupId>
+      <artifactId>javers-core</artifactId>
+      <version>${javers-coreVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>${poi-Version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi-ooxmlVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.github.ozlerhakan/poiji -->
+    <dependency>
+      <groupId>com.github.ozlerhakan</groupId>
+      <artifactId>poiji</artifactId>
+      <version>${poijiVersion}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>${mysql.connector.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${assertj.core.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.11.4</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-core -->
+    <dependency>
+      <groupId>org.jdbi</groupId>
+      <artifactId>jdbi3-core</artifactId>
+      <version>${jdbi3.core.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>json-path</artifactId>
+      <version>5.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.14</version> <!-- Use the latest version that's compatible -->
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient-cache -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient-cache</artifactId>
+      <version>4.5.14</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpmime</artifactId>
+      <version>4.5.14</version> <!-- Match httpclient version -->
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
